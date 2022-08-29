@@ -37,7 +37,7 @@ def top_values(df:pd.DataFrame, column:str, top:int) -> None:
 
 def plot_count(df:pd.DataFrame, column:str) -> None:
     plt.figure(figsize=(20,10))
-    fig = sns.countplot(data = df, x = column)
+    fig = sns.countplot(data = df, x = column, order = df[column].value_counts().index)
     plt.title(f'Distribution of {column}', size=20, fontweight='bold')
     plt.xticks(fontsize=20)
     plt.yticks(fontsize=20)
