@@ -4,7 +4,7 @@
 2. Control - contains user who are shown the dumy add. 
 
 - How to target the users? 
-  - This can be stated while designing the study. The machanism by whci we target the users may vary based on the problem. In the case of internet advertisement, users can be targeted using social media. 
+  - You can target your A/B tests to users based on specific behavior, attribute, or event. 
   - There are several types of targeting that should be considered. When A/B testing targeting audiences, we can A/B test within one target category or two targeting categories against one another. For instance, we might test two audiences with different age demographics to see if an ad performs better with one or another.
   - Type of targeting [here](https://www.3qdept.com/blog/display-targeting-fundamentals-ab-test-determine-ideal-audience/): 
     - ***Demographic***: Demographic targeting is based on consumer attributes, such as age, gender, household income, etc. Demographic targeting is extremely easy to scale because there are a wide range of 3rd-party data providers. However, given the nature of 3rd-party data, the resulting lists won’t be nearly as accurate as 1st-party data. We typically use demographic targeting for wide-reaching branding and awareness campaigns that aren’t tied to CPA. Example: For a product like the Amazon Echo that appeals to a large demographic group, we could target fathers age 60+ vs. professional women in the 20s-30s to see which shows better potential for conversion.
