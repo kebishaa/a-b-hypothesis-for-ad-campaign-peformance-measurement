@@ -11,5 +11,7 @@ on which experiment is performing better? For example if #yes > #no
 for the exposed group than the control group, could we declare that
  the ad had a significant impact Why or why not?
 
- - no, because we have to first check the statistical significancy of hte result and its practival significance
- - the result may be due to the randomization of the data, we may accidently get many users in one group
+ - no, because we have to first check the statistical significancy of 
+   the result and its practival significance
+ - the result may be due to the randomization of the data, we may accidently 
+   get many users in one group
