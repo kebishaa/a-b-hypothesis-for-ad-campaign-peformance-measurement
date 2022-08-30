@@ -21,19 +21,18 @@
   Any scientific research should start from stating research questions:
   - Will new internet advertising increase a company’s revenue?
   - oes a newly developed vaccine prevent the spread of disease?
+  - Will the new design of an online advertising increase company's brand awareness?
 
-  Researchers also investigate the background of the situation. What have other people discovered about this situation? How can we find the answer to the research question? What do we need to do? What is the population (or total collection of all individuals) under consideration? What kind of data need to be collected?
+  ___ How can we find the answer to the research question? ___ What do we need to do? What is the population (or total collection of all individuals) under consideration? What kind of data need to be collected?
 
-  The output of this step is a hypothesis, or an educated guess about the outcome of their research. A hypothesis is a statement such as the following:
-
+  The output of this step is a hypothesis. A hypothesis is a statement such as the following:
   - Using new internet advertising will increase the company’s sales revenue.
   - A newly-developed vaccine is effective at preventing tuberculosis.
+  - The newly designed advertising can increase company's brand awareness. 
 
   2. Collect the  Data
 
   When designing a study, much attention is given to the process by which data are observed. When examining data, it is also important to understand the data collection procedures. A sample is a subset (a portion) of a population. How is this sample obtained? How are the observations made?
-
-  In a designed experiment, researchers control the conditions of the study. In an observational study, researchers don’t control the conditions but only observe what happens.
 
   There are many sampling methods used to obtain a sample from a population:
 
@@ -45,8 +44,7 @@
 
   3. Describe the Data
 
-  - Quantitative variables represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. Categorical variables represent non-numerical data that can only be considered as labels, such as colors or brands of shoes.
-  When we describe data, we use any tools appropriate to the situation. This can include creating graphs or calculating statistics to help understand or visualize the data.
+  - When we describe data, we use any tools appropriate to the situation. This can include creating graphs or calculating statistics to help understand or visualize the data.
 
   4. Make Inferences
 
@@ -57,7 +55,6 @@
   - The goal of a statistical analysis is to determine which action to take in a particular situation. Actions can include many things: launching an internet ad campaign (or not), expressing gratitude (or not), getting vaccinated (or not), etc.
 
 - Assessment of the statistical significance of an A/B test is dependent on what kind of probability distribution the experimental data follows. Given your answer above, which statistical tests (z-test, t-test, etc.) are appropriate to use for this project?
-
 
 
 - In classical (frequentist) A/B testing, we use p-values to measure the significance of the experimental feature (being exposed to an ad in our case)  over the null hypothesis (the hypothesis that there is no difference in brand awareness between the exposed and control groups in the current case). How are p-values computed? What information do p-values provide? What are the  type-I and type-II errors you may have in the analysis? Can you comment on which error types p-values are related?
