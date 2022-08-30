@@ -30,7 +30,7 @@
   - oes a newly developed vaccine prevent the spread of disease?
   - Will the new design of an online advertising increase company's brand awareness?
 
-  ___ How can we find the answer to the research question? ___ What do we need to do? What is the population (or total collection of all individuals) under consideration? What kind of data need to be collected?
+  ___How can we find the answer to the research question? What do we need to do? What is the population (or total collection of all individuals) under consideration? What kind of data need to be collected?___
 
   The output of this step is a hypothesis. A hypothesis is a statement such as the following:
   - Using new internet advertising will increase the company’s sales revenue.
