@@ -1,7 +1,7 @@
 - Exposed and Control 
 
 1. Exposed - contains users who are shown the smart ad.
-2. Control - contains user who are shown the dumy add. 
+2. Control - contains user who are shown the dumy ad. 
 
 - How to target the users? 
   - You can target your A/B tests to users based on specific behavior, attribute, or event. 
