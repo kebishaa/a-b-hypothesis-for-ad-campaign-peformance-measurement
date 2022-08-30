@@ -15,41 +15,46 @@
 
 - Statistical process has five steps: Designing a study, Collecting a data, Describing the data, Make inferences, Take action. 
 
-#### Statistical Process
-1. Design the Study
+  #### Statistical Process
+  1. Design the Study
 
-Any scientific research should start from stating research questions:
-- Will new internet advertising increase a company’s revenue?
-- oes a newly developed vaccine prevent the spread of disease?
+  Any scientific research should start from stating research questions:
+  - Will new internet advertising increase a company’s revenue?
+  - oes a newly developed vaccine prevent the spread of disease?
 
-Researchers also investigate the background of the situation. What have other people discovered about this situation? How can we find the answer to the research question? What do we need to do? What is the population (or total collection of all individuals) under consideration? What kind of data need to be collected?
+  Researchers also investigate the background of the situation. What have other people discovered about this situation? How can we find the answer to the research question? What do we need to do? What is the population (or total collection of all individuals) under consideration? What kind of data need to be collected?
 
-The output of this step is a hypothesis, or an educated guess about the outcome of their research. A hypothesis is a statement such as the following:
+  The output of this step is a hypothesis, or an educated guess about the outcome of their research. A hypothesis is a statement such as the following:
 
-- Using new internet advertising will increase the company’s sales revenue.
-- A newly-developed vaccine is effective at preventing tuberculosis.
+  - Using new internet advertising will increase the company’s sales revenue.
+  - A newly-developed vaccine is effective at preventing tuberculosis.
 
-2. Collect the  Data
-When designing a study, much attention is given to the process by which data are observed. When examining data, it is also important to understand the data collection procedures. A sample is a subset (a portion) of a population. How is this sample obtained? How are the observations made?
+  2. Collect the  Data
 
-In a designed experiment, researchers control the conditions of the study. In an observational study, researchers don’t control the conditions but only observe what happens.
+  When designing a study, much attention is given to the process by which data are observed. When examining data, it is also important to understand the data collection procedures. A sample is a subset (a portion) of a population. How is this sample obtained? How are the observations made?
 
-There are many sampling methods used to obtain a sample from a population:
+  In a designed experiment, researchers control the conditions of the study. In an observational study, researchers don’t control the conditions but only observe what happens.
 
-- A simple random sample (SRS) is a random selection taken from a population
-- A systematic sample is every kth item in the population, beginning at a random starting point
-- A cluster sample is all items in one or more randomly selected clusters, or blocks
-- A stratified sample divides data into similar groups and an SRS is taken from each group
-- A convenience sample is one easily obtained in a less-than-systematic way and should be avoided whenever possible
+  There are many sampling methods used to obtain a sample from a population:
 
-3. Describe the Data
-- Quantitative variables represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. Categorical variables represent non-numerical data that can only be considered as labels, such as colors or brands of shoes.
-When we describe data, we use any tools appropriate to the situation. This can include creating graphs or calculating statistics to help understand or visualize the data.
+  - A simple random sample (SRS) is a random selection taken from a population
+  - A systematic sample is every kth item in the population, beginning at a random starting point
+  - A cluster sample is all items in one or more randomly selected clusters, or blocks
+  - A stratified sample divides data into similar groups and an SRS is taken from each group
+  - A convenience sample is one easily obtained in a less-than-systematic way and should be avoided whenever possible
 
-4. Make Inferences
-Inference is the process of using the information contained in a sample from a population to make a general statement (i.e. to infer something) about the entire population. Later in the course we will learn techniques that make this type of analysis possible.
-5. Take Action
-The goal of a statistical analysis is to determine which action to take in a particular situation. Actions can include many things: launching an internet ad campaign (or not), expressing gratitude (or not), getting vaccinated (or not), etc.
+  3. Describe the Data
+
+  - Quantitative variables represent things that are numeric in nature, such as the value of a car or the number of students in a classroom. Categorical variables represent non-numerical data that can only be considered as labels, such as colors or brands of shoes.
+  When we describe data, we use any tools appropriate to the situation. This can include creating graphs or calculating statistics to help understand or visualize the data.
+
+  4. Make Inferences
+
+  Inference is the process of using the information contained in a sample from a population to make a general statement (i.e. to infer something) about the entire population. Later in the course we will learn techniques that make this type of analysis possible.
+
+  5. Take Action
+
+  The goal of a statistical analysis is to determine which action to take in a particular situation. Actions can include many things: launching an internet ad campaign (or not), expressing gratitude (or not), getting vaccinated (or not), etc.
 
 - Assessment of the statistical significance of an A/B test is dependent on what kind of probability distribution the experimental data follows. Given your answer above, which statistical tests (z-test, t-test, etc.) are appropriate to use for this project?
 
