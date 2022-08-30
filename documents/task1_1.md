@@ -22,7 +22,7 @@
 
 - Statistical process has five steps: Designing a study, Collecting a data, Describing the data, Make inferences, Take action. 
 
-  #### Statistical Process
+  #### Statistical Process [here](https://byuistats.github.io/BYUI_M221_Book/Lesson02.html#:~:text=The%20Statistical%20Process%20has%20five,but%20only%20observe%20what%20happens.)
   1. Design the Study
 
   Any scientific research should start from stating research questions:
