@@ -1,7 +1,7 @@
-#Introduction#
+# Introduction #
 This technical project titled “A/B Hypothesis Testing: Ad campaign performance” aims to help an advertising company (SmartAd) to assess its additional service called Brand Impact Optimizer (BIO). Actually, the BIO service is provided to quantify the increase in brand awareness as a result of the ads it shows to online users. Two groups of users have been made: users who have been shown a dummy ad (controlled group) and users who have been shown a creative (ad) that was designed for the client (exposed group). The overall objective of this project is then to compare the two groups using the brand awareness metric (knowing or not the brand Lux) in order to figure out which one of them performs better. This goal will be reached by testing if the ads that the advertising company runs resulted in a significant lift in brand awareness using A/B testing on the two groups of users. This interim report aims to go through the understanding of the A/B testing framework. In order to do this, different points in the form of questions will be addressed and answered.
 
-#Which online users belong to the control and exposed groups?#
+# Which online users belong to the control and exposed groups? #
 Users in the controlled groups are those who have been shown a dummy ad and users in the exposed group are those who have been shown an ad designed for the client.
 
 #How are the users targeted?#
