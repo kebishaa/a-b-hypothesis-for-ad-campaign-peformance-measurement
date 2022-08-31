@@ -20,9 +20,14 @@ except BaseException:
 class TestGetInformations(unittest.TestCase):
     # def setUp(self):
         
-   def test_load_data(self):
+    def test_top_values(self):
+        self.assertIsInstance(data_loader.top_values(
+            test_data, 'yes',3),pd.DataFrame )
+    
+    def test_load_data(self):
        self.assertIsInstance(data_loader.load_data(
            './data/AdSmartABdata.csv'),pd.DataFrame)
- 
+
+        
 if __name__ == "__main__":
     unittest.main()
