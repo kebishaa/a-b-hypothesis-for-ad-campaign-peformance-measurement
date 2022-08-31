@@ -1,9 +1,16 @@
 
 import numpy as np
 import pandas as pd
+import logging
+
+logging.basicConfig(filename='./logfile.log', filemode='a',
+                    encoding='utf-8', level=logging.DEBUG)
 
 def load_data(path: str):
-    df = pd.read_csv(path)
+    try:
+        df = pd.read_csv(path)
+    except BaseException:
+        logging.warning('file not found or wrong file format')
     return df
 
 def data_shape(df):
@@ -30,7 +37,6 @@ def percent_missing(df):
     # Calculate percentage of missing values
     print("The dataset contains", round(
         ((totalMissing/totalCells) * 100), 2), "%", "missing values.")
-
 
 def top_values(df: pd.DataFrame, column: str, top: int) -> None:
     values = df[column].value_counts()

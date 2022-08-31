@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.join("./scripts")))
 
 import data_loader
 
-logging.basicConfig(filename='../logfile.log', filemode='a',
+logging.basicConfig(filename='./logfile.log', filemode='a',
                     encoding='utf-8', level=logging.DEBUG)
 
 try:
