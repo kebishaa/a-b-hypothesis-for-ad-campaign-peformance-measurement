@@ -28,15 +28,3 @@ if __name__ == "__main__":
     
     for col in dict_browsers.keys():
         dict_browsers[col].to_csv(f"/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement/data/data_{col.replace('/', '' )}.csv", index=False)
-        
-        
-def data_split(df:pd.DataFrame,col,values):
-    
-    for val in values:
-        data_version = df[df[col] == val]
-        print('shape for data_version is {}'.format(data_version.shape))
-        
-        print('saving data to csv ...')
-        data_version.to_csv(os.path.join('../data/',col+"_"+str(val).replace(" ","")+'.csv'))
-        print('done saving')
-        
