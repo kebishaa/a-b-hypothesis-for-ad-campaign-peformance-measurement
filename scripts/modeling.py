@@ -50,7 +50,7 @@ from sklearn.model_selection import cross_val_score
 
 path='data/AdSmartABdata.csv'
 repo='/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement'
-version='v4'
+version='v3'
 
 data_url = dvc.api.get_url(
     path=path,

@@ -9,7 +9,7 @@ def split(df, column):
     split_dict = split_dict
     todel = []
     for i in split_dict.keys():
-        if len(split_dict[i]) <= 10:
+        if len(split_dict[i]) <= 30:
             todel.append(i)
     for i in todel:
         del split_dict[i]
