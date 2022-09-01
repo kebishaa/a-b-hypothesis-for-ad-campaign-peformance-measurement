@@ -27,7 +27,7 @@ class DistributionPlots:
         x = np.linspace(C_aware-49, C_aware+50, 100)
         y = scs.binom(C_total, C_cr).pmf(x)
         ax.bar(x, y, alpha=0.5)
-        ax.axvline(x=E_cr * C_total, c='blue', alpha=0.75, linestyle='--')
+        ax.axvline(x=E_cr * C_total, c='blue', alpha=0.5, linestyle='--')
         plt.xlabel('Aware')
         plt.ylabel('probability')
         plt.show()
@@ -47,4 +47,6 @@ class DistributionPlots:
     def null_alt_distribution(self, C_total, E_total, C_cr, E_cr) -> None:
         bcr = C_cr
         mde = E_cr - C_cr
-        HPP.hypo_plot(C_total, E_total, bcr, mde, show_power=True, show_beta=True, show_alpha=True, show_p_value=True)
+
+        HPP.hypo_plot(C_total, E_total, bcr, mde, show_power=False, show_beta=False, show_alpha=False, show_p_value=False)
+
