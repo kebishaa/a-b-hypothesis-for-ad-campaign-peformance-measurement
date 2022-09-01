@@ -1,5 +1,5 @@
 import pandas as pd
-
+import os
 def split(df, column):
     split_dict = {}
     for i in list(df[column].value_counts().index):
