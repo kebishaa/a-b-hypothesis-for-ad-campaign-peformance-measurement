@@ -1,0 +1,4 @@
+[core]
+    remote = week2-remote
+['remote "week2-remote"']
+    url = /home/jds98/10 Academy/Week 2/dvc-storage
