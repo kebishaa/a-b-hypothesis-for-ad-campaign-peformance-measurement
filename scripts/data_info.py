@@ -45,3 +45,31 @@ class dataframeInfo:
             Returns the unique value count of the passed Dataframe
         '''
         return pd.DataFrame(self.df.apply(lambda x: len(x.value_counts(dropna=False)), axis=0), columns=['Unique Value Count']).sort_values(by='Unique Value Count', ascending=True)
+    def find_duplicates(self):
+        '''
+            Returns the duplicates of the passed Dataframe
+        '''
+        return self.df[self.df.duplicated()]
+
+    def find_column_based_missing_percentage(self):
+        '''
+            Returns the missing percentage of the passed Dataframe
+        '''
+        col_null = self.df.isnull().sum()
+        total_entries = self.df.shape[0]
+        missing_percentage = []
+        for col_missing_entries in col_null:
+            value = str(
+                round(((col_missing_entries/total_entries) * 100), 2)) + " %"
+            missing_percentage.append(value)
+
+        missing_df = pd.DataFrame(col_null, columns=['total_missing_values'])
+        missing_df['missing_percentage'] = missing_percentage
+        return missing_df
+    def find_columns_missing_percentage_greater_than(self, num: float):
+        '''
+            Returns the missing percentage of the passed Dataframe
+        '''
+        all_cols = self.get_column_based_missing_percentage()
+        extracted = all_cols['missing_percentage'].str.extract(r'(.+)%')
+        return extracted[extracted[0].apply(lambda x: float(x) >= num)].index
