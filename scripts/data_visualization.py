@@ -48,3 +48,28 @@ class exploration:
         plt.xticks(fontsize=14)
         plt.yticks(fontsize=14)
         plt.show()
+     def simple_plot_scatter(df: pd.DataFrame, x_col: str, y_col: str, title: str) -> None:
+        '''
+        df: dataframe to be plotted
+        x_col: x-axis column
+        y_col: y-axis column
+        title: Title of the plot
+        '''
+        plt.figure(figsize=(12, 7))
+        sns.scatterplot(data=df, x=x_col, y=y_col)
+        plt.title(title, size=20)
+        plt.xticks(fontsize=14)
+        plt.yticks(fontsize=14)
+        plt.show()
+
+    def plot_hist(df: pd.DataFrame, column: str, color: str) -> None:
+        '''
+        # hist: Plot a histogram.
+        # df: dataframe to be plotted
+        # column: column to be plotted
+        # color: color of the histogram
+        '''
+        sns.displot(data=df, x=column, color=color,
+                    kde=True, height=7, aspect=2)
+        plt.title(f'Distribution of {column}', size=20, fontweight='bold')
+        plt.show()
