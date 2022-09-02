@@ -143,7 +143,7 @@ nest-asyncio==1.5.5
 networkx==2.8.6
 numexpr==2.8.3
 numpy==1.23.1
-oauth2client==4.0.0
+oauth2client==3.0.0
 oauthlib==3.2.0
 omegaconf==2.2.3
 opencv-python==4.6.0.66
