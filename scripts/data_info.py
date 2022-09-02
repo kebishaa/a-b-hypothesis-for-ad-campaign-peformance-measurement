@@ -32,3 +32,11 @@ class dataframeInfo:
         value = self.df.memory_usage(deep=True).sum()
         print(f"Current DataFrame Memory Usage:\n{value}")
         return value
+    def find_aggregate(self, stat_list: list):
+        '''
+            Returns the aggregate of the passed Dataframe
+        '''
+        try:
+            return self.df.agg(stat_list)
+        except:
+            print("Failed to get aggregates")
