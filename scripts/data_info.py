@@ -13,3 +13,8 @@ class dataframeInfo:
             Parameters
         """
         self.df = df
+    def find_matrix_correlation(self):
+        '''
+            Returns the correlation matrix of the passed Dataframe
+        '''
+        return self.df.corr()
