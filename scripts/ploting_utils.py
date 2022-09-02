@@ -3,16 +3,20 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def plot_count(df:pd.DataFrame, column:str) -> None:
-    plt.figure(figsize=(20,10))
-    fig = sns.countplot(data = df, x = column, order = df[column].value_counts().index)
+
+def plot_count(df: pd.DataFrame, column: str) -> None:
+    plt.figure(figsize=(20, 10))
+    fig = sns.countplot(data=df, x=column,
+                        order=df[column].value_counts().index)
     plt.title(f'Distribution of {column}', size=20, fontweight='bold')
     plt.xticks(fontsize=20)
     plt.yticks(fontsize=20)
     plt.xlabel(column, fontsize=20)
     plt.ylabel('Absolute frequencies', fontsize=20)
     for i in range(len(df[column].value_counts())):
-        fig.text(i, (df[column].value_counts()[i])/2, str(df[column].value_counts()[i]), fontdict = dict(color = 'black', fontsize = 30), horizontalalignment = 'center')
+        fig.text(i, (df[column].value_counts().values[i]), str(df[column].value_counts().values[i]),
+                 fontdict=dict(color='black', fontsize=30), horizontalalignment='center')
+
 
 def multi_plot_count(df:pd.DataFrame, column:str, hue: str) -> None:
     plt.figure(figsize=(20,10))
