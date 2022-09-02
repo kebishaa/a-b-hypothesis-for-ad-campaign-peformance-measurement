@@ -49,8 +49,8 @@ from sklearn.model_selection import cross_val_score
 
 
 path='data/AdSmartABdata.csv'
-repo='/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement'
-version='v3'
+repo = '/Users/user/TENAC/week-1-4/Week-2/a-b-hypothesis-for-ad-campaign-peformance-measurement'
+version='v1'
 
 data_url = dvc.api.get_url(
     path=path,
@@ -72,22 +72,11 @@ if __name__ == "__main__":
     mlflow.log_param("data_rows", data.shape[0])
     mlflow.log_param("data_cols", data.shape[1])
 
+    ## Spliting the data
+    from fast_ml.model_development import train_valid_test_split
 
-    ## Clean data
-    df_clean = preprocess.nonResponse(data)
-    torem = ['auction_id', 'date', 'no']
-    df_clean = preprocess.remove(df_clean, torem)
-    df_clean['device_make'], dic_device = preprocess.encode(df_clean, 'device_make')
-    df_clean['experiment'], dic_experiment = preprocess.encode(df_clean, 'experiment')
-
-    if version=='v4' or version=='v6' or version=='v7' or version=='v10':
-        df_clean.drop(['browser'], axis=1, inplace=True)
-        df_clean = preprocess.hot_encode(df_clean,'platform_os')
-    elif version=='v3':
-        df_clean.drop(['platform_os'], axis=1, inplace=True)
-        df_clean['browser'], dic_browser = preprocess.encode(df_clean, 'browser')
-
-
+    X_train, y_train, X_valid, y_valid, X_test, y_test = train_valid_test_split(data, target = 'yes', 
+                                                                                train_size=0.8, valid_size=0.1, test_size=0.1)
     ## Spliting the data
     X_train, y_train, X_valid, y_valid, X_test, y_test = train_valid_test_split(df_clean, target = 'yes', 
                                                                                 train_size=0.7, valid_size=0.20, test_size=0.10)
@@ -99,10 +88,17 @@ if __name__ == "__main__":
     # Log artifacts: columns used for modeling
     cols_x = pd.DataFrame(list(X_train.columns))
     cols_x.to_csv('features.csv', header=False, index=False)
-    mlflow.log_artifact('features.csv')
+#     mlflow.log_artifact('features.csv')
 
-    cols_y = pd.DataFrame(list(y_train.columns))
-    cols_y.to_csv('targets.csv', header=False, index=False)
-    mlflow.log_artifact('targets.csv')
+#     cols_y = pd.DataFrame(list(y_train.columns))
+#     cols_y.to_csv('targets.csv', header=False, index=False)
+#     mlflow.log_artifact('targets.csv')
 
+# 	# Log an artifact (output file)
+#     if not os.path.exists("outputs"):
+# 	    os.makedirs("outputs")
+# #	with open("outputs/test.txt", "w") as f:
+# #		f.write("hello world!")
+# 	mlflow.log_artifacts("outputs")
+	
 
