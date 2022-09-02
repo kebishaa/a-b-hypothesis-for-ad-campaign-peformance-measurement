@@ -1,5 +1,7 @@
 import pandas as pd
 import os
+import preprocess
+
 def split(df, column):
     split_dict = {}
     for i in list(df[column].value_counts().index):
@@ -9,7 +11,7 @@ def split(df, column):
     split_dict = split_dict
     todel = []
     for i in split_dict.keys():
-        if len(split_dict[i]) <= 10:
+        if len(split_dict[i]) <= 30:
             todel.append(i)
     for i in todel:
         del split_dict[i]
@@ -19,6 +21,8 @@ def split(df, column):
 
 if __name__ == "__main__":
     df = pd.read_csv("/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement/data/AdSmartABdata.csv")
+
+    df = preprocess.nonResponse(df)
 
     dict_browsers = split(df, 'browser')
     dict_platforms = split(df, 'platform_os')

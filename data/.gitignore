@@ -1,10 +1,6 @@
 /AdSmartABdata.csv
-/data_5.csv
-/data_6.csv
-/data_Chrome Mobile.csv
-/data_Chrome Mobile iOS.csv
-/data_Chrome Mobile WebView.csv
-/data_Facebook.csv
-/data_Mobile Safari.csv
-/data_Mobile Safari UIWKWebView.csv
-/data_Samsung Internet.csv
+/Chrome_Mobile.csv
+/Chrome_Mobile_WebView.csv
+/Facebook.csv
+/Platform_6.csv
+/Samsung_Internet.csv
