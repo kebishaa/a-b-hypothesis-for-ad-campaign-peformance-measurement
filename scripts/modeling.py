@@ -1,3 +1,5 @@
+from sklearn.metrics import classification_report
+from tkinter import font
 import preprocess
 
 # Get url from DVC
@@ -45,7 +47,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import BernoulliNB, GaussianNB
-from sklearn.linear_model import ElasticNet
 from urllib.parse import urlparse
 
 # To evaluate end result we have
@@ -71,10 +72,8 @@ mlflow.set_experiment('mlops-abtest')
 
 
 def eval_metrics(actual, pred):
-    rmse = np.sqrt(mean_squared_error(actual, pred))
-    mae = mean_absolute_error(actual, pred)
-    r2 = r2_score(actual, pred)
-    return rmse, mae, r2
+    tn, fp, fn, tp = confusion_matrix(actual,pred).ravel()
+    return {'acc':(tp+fp)/(tn+tp+fn+fp), 'prec':tp/(tp+fp),'rec':tp/(tp+fn)}
 
 if __name__ == "__main__":
     warnings.filterwarnings("ignore")
@@ -112,9 +111,6 @@ if __name__ == "__main__":
     print("X_valid shape: ", X_valid.shape), print("y_valid shape: ", y_valid.shape)
     print("X_test shape: ", X_test.shape), print("y_test shape: ", y_test.shape)
 
-    alpha = float(sys.argv[1]) if len(sys.argv) > 1 else 0.5
-    l1_ratio = float(sys.argv[2]) if len(sys.argv) > 2 else 0.5
-
     with mlflow.start_run():
         # Log data params
         mlflow.log_param("data_url", data_url)
@@ -122,23 +118,40 @@ if __name__ == "__main__":
         mlflow.log_param("data_rows", data.shape[0])
         mlflow.log_param("data_cols", data.shape[1])
         
-        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+        lr = LogisticRegression(random_state=42)
         lr.fit(X_train, y_train)
-
+        
+        labels = X_train.columns
+        importance = lr.coef_
+        feature_df = pd.DataFrame(list(zip(labels,importance[0])),columns=['features','importance'])
+        feature_df = feature_df.sort_values('importance',ascending=False)
+        
+        ax =sns.barplot(x='importance',y='features',data=feature_df)
+        ax.set_xlabel('Importance',fontsize=18)
+        ax.set_ylabel('Feature', fontsize=18)
+        ax.set_title('rf f-i', fontsize=22)
+        plt.tight_layout()
+        plt.savefig('./images/fi.png')
+        plt.close()
+        
         predicted_qualities = lr.predict(X_test)
 
-        (rmse, mae, r2) = eval_metrics(y_test, predicted_qualities)
+        evaluatin_dict = eval_metrics(y_test, predicted_qualities)
+        
+        # Writing to file
+        with open("./models/metrics.txt", "w") as file1:
+            # Writing data to a file
+            file1.write("accuracy is %2.1f%% \n" % evaluatin_dict['acc'] )
+            file1.write("precision is %2.1f%% \n" % evaluatin_dict['prec'])
+            file1.write("recall is %2.1f%% \n" % evaluatin_dict['rec'])
 
-        print("Elasticnet model (alpha=%f, l1_ratio=%f):" % (alpha, l1_ratio))
-        print("  RMSE: %s" % rmse)
-        print("  MAE: %s" % mae)
-        print("  R2: %s" % r2)
+        print("  acc: %s" % evaluatin_dict['acc'])
+        print("  precision: %s" % evaluatin_dict['prec'])
+        print("  recall: %s" % evaluatin_dict['rec'])
 
-        mlflow.log_param("alpha", alpha)
-        mlflow.log_param("l1_ratio", l1_ratio)
-        mlflow.log_metric("rmse", rmse)
-        mlflow.log_metric("r2", r2)
-        mlflow.log_metric("mae", mae)
+        mlflow.log_metric("acc",  evaluatin_dict['acc'])
+        mlflow.log_metric("prec", evaluatin_dict['prec'])
+        mlflow.log_metric("recall", evaluatin_dict['rec'])
 
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
