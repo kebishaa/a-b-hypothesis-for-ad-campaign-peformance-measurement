@@ -40,8 +40,6 @@ click-repl==0.2.0
 cloudpickle==2.1.0
 colorama==0.4.5
 commonmark==0.9.1
-conda==4.14.0
-conda-package-handling==1.8.1
 configobj==5.0.6
 contractions==0.0.18
 cryptography==37.0.4
@@ -120,7 +118,6 @@ jupyterlab-server==2.15.0
 jupyterlab-widgets==1.1.1
 kiwisolver==1.4.4
 kombu==5.2.4
-libmambapy==0.25.0
 Mako==1.2.2
 mamba==0.25.0
 MarkupSafe==2.1.1
@@ -146,9 +143,6 @@ neptune-client==0.16.5
 neptune-notebooks==0.9.3
 nest-asyncio==1.5.5
 networkx==2.8.6
-nltk==3.7
-notebook==6.4.12
-notebook-shim==0.1.0
 numexpr==2.8.3
 numpy==1.23.1
 oauth2client==4.0.0
@@ -168,7 +162,6 @@ patsy==0.5.2
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.2.0
-pip==22.1.2
 plotly==5.10.0
 plotnine==0.9.0
 prometheus-client==0.14.1
