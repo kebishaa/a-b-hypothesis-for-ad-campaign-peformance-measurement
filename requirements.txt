@@ -44,7 +44,6 @@ configobj==5.0.6
 contractions==0.0.18
 cryptography==37.0.4
 cycler==0.11.0
-Cython==0.29.28
 databricks-cli==0.17.3
 debugpy==1.5.1
 decorator==5.1.1
@@ -119,7 +118,6 @@ jupyterlab-widgets==1.1.1
 kiwisolver==1.4.4
 kombu==5.2.4
 Mako==1.2.2
-mamba==0.25.0
 MarkupSafe==2.1.1
 matplotlib==3.5.3
 matplotlib-inline==0.1.2
