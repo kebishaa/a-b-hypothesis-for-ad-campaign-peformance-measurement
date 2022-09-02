@@ -20,7 +20,7 @@ def split(df, column):
 
 
 if __name__ == "__main__":
-    df = pd.read_csv("/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement/data/AdSmartABdata.csv")
+    df = pd.read_csv("./dSmartABdata.csv")
 
     df = preprocess.nonResponse(df)
 
@@ -28,7 +28,7 @@ if __name__ == "__main__":
     dict_platforms = split(df, 'platform_os')
 
     for col in dict_platforms.keys():
-        dict_platforms[col].to_csv(f"/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement/data/data_{col}.csv", index=False)
+        dict_platforms[col].to_csv("./data/data_{col}.csv", index=False)
     
     for col in dict_browsers.keys():
-        dict_browsers[col].to_csv(f"/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement/data/data_{col.replace('/', '' )}.csv", index=False)
+        dict_browsers[col].to_csv("./data/data_{col.replace('/', '' )}.csv", index=False)
