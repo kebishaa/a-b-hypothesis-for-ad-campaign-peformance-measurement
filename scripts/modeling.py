@@ -48,7 +48,7 @@ from sklearn.model_selection import cross_val_score
 
 path='data/AdSmartABdata.csv'
 repo = '/Users/user/TENAC/week-1-4/Week-2/a-b-hypothesis-for-ad-campaign-peformance-measurement'
-version='v6'
+version='v1'
 
 data_url = dvc.api.get_url(
     path=path,
@@ -69,7 +69,6 @@ if __name__ == "__main__":
     mlflow.log_param("data_version", version)
     mlflow.log_param("data_rows", data.shape[0])
     mlflow.log_param("data_cols", data.shape[1])
-
 
     ## Spliting the data
     from fast_ml.model_development import train_valid_test_split
