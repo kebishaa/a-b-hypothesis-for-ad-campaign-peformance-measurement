@@ -47,8 +47,8 @@ from sklearn.model_selection import cross_val_score
 
 
 path='data/AdSmartABdata.csv'
-repo='/home/jds98/10 Academy/Week 2/a-b-hypothesis-for-ad-campaign-peformance-measurement'
-version='v1'
+repo = '/Users/user/TENAC/week-1-4/Week-2/a-b-hypothesis-for-ad-campaign-peformance-measurement'
+version='v6'
 
 data_url = dvc.api.get_url(
     path=path,
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     ## Spliting the data
     from fast_ml.model_development import train_valid_test_split
 
-    X_train, y_train, X_valid, y_valid, X_test, y_test = train_valid_test_split(data, target = 'SalePrice', 
+    X_train, y_train, X_valid, y_valid, X_test, y_test = train_valid_test_split(data, target = 'yes', 
                                                                                 train_size=0.8, valid_size=0.1, test_size=0.1)
 
     print(X_train.shape), print(y_train.shape)
@@ -84,17 +84,17 @@ if __name__ == "__main__":
     # Log artifacts: columns used for modeling
     cols_x = pd.DataFrame(list(X_train.columns))
     cols_x.to_csv('features.csv', header=False, index=False)
-    mlflow.log_artifact('features.csv')
+#     mlflow.log_artifact('features.csv')
 
-    cols_y = pd.DataFrame(list(y_train.columns))
-    cols_y.to_csv('targets.csv', header=False, index=False)
-    mlflow.log_artifact('targets.csv')
+#     cols_y = pd.DataFrame(list(y_train.columns))
+#     cols_y.to_csv('targets.csv', header=False, index=False)
+#     mlflow.log_artifact('targets.csv')
 
-	# Log an artifact (output file)
-    if not os.path.exists("outputs"):
-	    os.makedirs("outputs")
-#	with open("outputs/test.txt", "w") as f:
-#		f.write("hello world!")
-	log_artifacts("outputs")
+# 	# Log an artifact (output file)
+#     if not os.path.exists("outputs"):
+# 	    os.makedirs("outputs")
+# #	with open("outputs/test.txt", "w") as f:
+# #		f.write("hello world!")
+# 	mlflow.log_artifacts("outputs")
 	
 
