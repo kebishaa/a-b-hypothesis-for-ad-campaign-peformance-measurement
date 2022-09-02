@@ -60,4 +60,11 @@ class DecisionTreesModel:
             loss_arr.append(loss)
             
         return self.clf, acc_arr, loss_arr
+    def printAccuracy(self, acc, step=1, label=""):
+        print(f"step {step}: {label} Accuracy of DecisionTreesModel is: {acc:.3f}")
     
+    def printLoss(self, loss, step=1, label=""):
+        print(f"step {step}: {label} Loss of DecisionTreesModel is: {loss:.3f}")
+    
+    def calculate_score(self, pred, actual):
+        return metrics.accuracy_score(actual, pred
