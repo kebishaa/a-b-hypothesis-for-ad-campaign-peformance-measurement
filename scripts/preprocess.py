@@ -22,7 +22,7 @@ def encode(df, col):
     encoder = LabelEncoder()
     df[col] = encoder.fit_transform(df[col])
     inv = encoder.inverse_transform(df[col])
-    dic = pd.DataFrame(data= {'Label': list(inv), 'Code': list(df[col])})
-    return df[col], dic
+    # dic = pd.DataFrame(data= {'Label': list(inv), 'Code': list(df[col])})
+    return df
 
   
