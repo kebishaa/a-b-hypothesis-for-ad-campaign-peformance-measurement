@@ -18,3 +18,17 @@ class dataframeInfo:
             Returns the correlation matrix of the passed Dataframe
         '''
         return self.df.corr()
+    def find_memory_usage(self):
+        '''
+            Returns the memory usage of the passed DAtaframe
+        '''
+        print(f"Current DataFrame Memory Usage of columns is :")
+        return self.df.memory_usage()
+
+    def find_total_memory_usage(self):
+        '''
+            Returns the total memory usage of the passed Dataframe
+        '''
+        value = self.df.memory_usage(deep=True).sum()
+        print(f"Current DataFrame Memory Usage:\n{value}")
+        return value
