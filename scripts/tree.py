@@ -23,3 +23,41 @@ class DecisionTreesModel:
         self.y_test = y_test
         
         self.clf = DecisionTreeClassifier(max_depth=4)
+    def write_model(self, file_name, model):
+      with open(f"../models/{file_name}.pkl", "wb") as f:
+          pickle.dump(model, f)
+        
+        
+    def train(self, folds=1):
+        
+        kf = KFold(n_splits = folds)
+        
+        iterator = kf.split(self.X_train)
+        
+        loss_arr = []
+        acc_arr = []
+
+        for i in range(folds):
+            train_index, valid_index = next(iterator)
+            
+            X_train, y_train = self.X_train.iloc[train_index], self.y_train.iloc[train_index]
+            X_valid, y_valid = self.X_train.iloc[valid_index], self.y_train.iloc[valid_index]
+                        
+            self.clf = self.clf.fit(X_train, y_train)
+            
+            vali_pred = self.clf.predict(X_valid)
+            
+            accuracy = self.calculate_score(y_valid
+                                              , vali_pred)
+            
+            loss = loss_function(y_valid, vali_pred)
+            
+            self.__printAccuracy(accuracy, i, label="Validation")
+            self.__printLoss(loss, i, label="Validation")
+            print()
+            
+            acc_arr.append(accuracy)
+            loss_arr.append(loss)
+            
+        return self.clf, acc_arr, loss_arr
+    
