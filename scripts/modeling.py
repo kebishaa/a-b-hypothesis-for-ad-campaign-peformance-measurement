@@ -1,3 +1,5 @@
+import preprocess
+
 # Get url from DVC
 from asyncio.log import logger
 import warnings
@@ -75,10 +77,13 @@ if __name__ == "__main__":
 
     X_train, y_train, X_valid, y_valid, X_test, y_test = train_valid_test_split(data, target = 'yes', 
                                                                                 train_size=0.8, valid_size=0.1, test_size=0.1)
+    ## Spliting the data
+    X_train, y_train, X_valid, y_valid, X_test, y_test = train_valid_test_split(df_clean, target = 'yes', 
+                                                                                train_size=0.7, valid_size=0.20, test_size=0.10)
 
-    print(X_train.shape), print(y_train.shape)
-    print(X_valid.shape), print(y_valid.shape)
-    print(X_test.shape), print(y_test.shape)
+    print("X_train shape: ", X_train.shape), print("y_train shape: ", y_train.shape)
+    print("X_valid shape: ", X_valid.shape), print("y_valid shape: ", y_valid.shape)
+    print("X_test shape: ", X_test.shape), print("y_test shape: ", y_test.shape)
 
     # Log artifacts: columns used for modeling
     cols_x = pd.DataFrame(list(X_train.columns))
