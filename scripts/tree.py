@@ -67,4 +67,4 @@ class DecisionTreesModel:
         print(f"step {step}: {label} Loss of DecisionTreesModel is: {loss:.3f}")
     
     def calculate_score(self, pred, actual):
-        return metrics.accuracy_score(actual, pred
+        return metrics.accuracy_score(actual, pred)
