@@ -26,7 +26,7 @@ class XGBClassifierModel:
     def write_model(self, file_name, model):
       with open(f"../models/{file_name}.pkl", "wb") as f:
           pickle.dump(model, f)
-     def train(self, folds=1):
+    def train(self, folds=1):
         
         kf = KFold(n_splits = folds)
         
