@@ -119,3 +119,13 @@ class exploration:
         plt.xticks(rotation=75, fontsize=14)
         plt.yticks(fontsize=14)
         plt.show()
+    def plot_count(df: pd.DataFrame, column: str) -> None:
+        '''
+        # count: Plot a count plot.
+        # df: dataframe to be plotted
+        # column: column to be plotted
+        '''
+        plt.figure(figsize=(12, 7))
+        sns.countplot(data=df, x=column)
+        plt.title(f'Distribution of {column}', size=20, fontweight='bold')
+        plt.show()
