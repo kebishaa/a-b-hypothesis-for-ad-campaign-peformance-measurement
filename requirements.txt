@@ -218,7 +218,6 @@ simplejson==3.17.6
 six==1.16.0
 sklearn==0.0
 smart-open==6.0.0
-smmap==5.0.0
 sniffio==1.2.0
 soupsieve==2.3.1
 sprt==0.0.1
