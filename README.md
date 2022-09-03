@@ -19,6 +19,9 @@ Design a reliable hypothesis testing algorithm for the BIO service and to determ
 https://medium.com/@degagawolde/a-b-testing-hypothesis-testing-machine-learning-1b352a6ff180
 
 ## Authors
+
 [Degaga](https://github.com/degagawolde)
+
 [Josias](https://github.com/orgs/10-Academy-B6-W2-Team-10/people/Josias-Ounsinli)
+
 [Kibatu](https://github.com/orgs/10-Academy-B6-W2-Team-10/people/kebishaa)
