@@ -6,7 +6,6 @@ def nonResponse(df):
     clean_data = df[df['yes'] == 1].append(df[df['no'] == 1])
     return clean_data
 
-
 def remove(df, torem: list):
     df = df.drop(torem, axis=1)
     return df

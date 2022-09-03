@@ -78,3 +78,13 @@ accuracy is 0.6%
 precision is 0.5% 
 recall is 0.9% 
 F1 Score 0.7% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.5% 
+precision is 0.0% 
+recall is 0.0% 
+F1 Score 0.0% 
+Model Metrics for decision tree with data version v1
+accuracy is 0.5% 
+precision is 0.6% 
+recall is 0.0% 
+F1 Score 0.1% 
