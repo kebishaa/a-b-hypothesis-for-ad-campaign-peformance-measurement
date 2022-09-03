@@ -1,6 +1,7 @@
 version: "3.7"
 
 services: 
-    streamlit-dashboard:
+    abtest-mlops:
       build: .
+      image: abtest_mlops:tenacademyabtest
       command: sh -c "sleep 10s;python setup.py"
