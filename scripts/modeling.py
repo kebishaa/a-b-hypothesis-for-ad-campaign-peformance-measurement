@@ -59,7 +59,7 @@ from sklearn.model_selection import cross_val_score
 import preprocess
 
 path = 'data/AdSmartABdata.csv'
-repo = '/Users/user/TENAC/week-1-4/Week-2/a-b-hypothesis-for-ad-campaign-peformance-measurement'
+repo = 'https://github.com/10-Academy-B6-W2-Team-10/a-b-hypothesis-for-ad-campaign-peformance-measurement.git'
 version='v1'
 
 data_url = dvc.api.get_url(
