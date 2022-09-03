@@ -88,3 +88,193 @@ accuracy is 0.5%
 precision is 0.6% 
 recall is 0.0% 
 F1 Score 0.1% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.6% 
+precision is 0.0% 
+recall is 0.0% 
+F1 Score 0.0% 
+Model Metrics for decision tree with data version v1
+accuracy is 0.6% 
+precision is 0.4% 
+recall is 0.3% 
+F1 Score 0.3% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.6% 
+precision is 0.0% 
+recall is 0.0% 
+F1 Score 0.0% 
+Model Metrics for decision tree with data version v1
+accuracy is 0.6% 
+precision is 0.4% 
+recall is 0.2% 
+F1 Score 0.2% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.5% 
+precision is 0.4% 
+recall is 0.1% 
+F1 Score 0.1% 
+Model Metrics for decision tree with data version v1
+accuracy is 0.5% 
+precision is 0.4% 
+recall is 0.2% 
+F1 Score 0.3% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.5% 
+precision is 0.5% 
+recall is 0.2% 
+F1 Score 0.2% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.6% 
+precision is 0.7% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.5% 
+precision is 0.0% 
+recall is 0.0% 
+F1 Score 0.0% 
+Model Metrics for decision tree with data version v1
+accuracy is 0.5% 
+precision is 0.5% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for logistic regression with data version v2
+accuracy is 0.5% 
+precision is 0.5% 
+recall is 0.5% 
+F1 Score 0.5% 
+Model Metrics for decision tree with data version v2
+accuracy is 0.6% 
+precision is 0.6% 
+recall is 0.5% 
+F1 Score 0.5% 
+Model Metrics for logistic regression with data version v3
+accuracy is 0.5% 
+precision is 1.0% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for decision tree with data version v3
+accuracy is 0.6% 
+precision is 1.0% 
+recall is 0.1% 
+F1 Score 0.2% 
+Model Metrics for logistic regression with data version v4
+accuracy is 0.6% 
+precision is 0.3% 
+recall is 0.2% 
+F1 Score 0.2% 
+Model Metrics for decision tree with data version v4
+accuracy is 0.4% 
+precision is 0.1% 
+recall is 0.2% 
+F1 Score 0.2% 
+Model Metrics for logistic regression with data version v5
+accuracy is 0.5% 
+precision is 0.5% 
+recall is 0.3% 
+F1 Score 0.4% 
+Model Metrics for decision tree with data version v5
+accuracy is 0.4% 
+precision is 0.4% 
+recall is 0.4% 
+F1 Score 0.4% 
+Model Metrics for logistic regression with data version v1
+accuracy is 0.6% 
+precision is 0.5% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for decision tree with data version v1
+accuracy is 0.5% 
+precision is 0.4% 
+recall is 0.2% 
+F1 Score 0.3% 
+Model Metrics for random forest with data version v1
+accuracy is 0.5% 
+precision is 0.4% 
+recall is 0.3% 
+F1 Score 0.3% 
+Model Metrics for xgboost with data version v1
+accuracy is 0.6% 
+precision is 0.5% 
+recall is 0.3% 
+F1 Score 0.3% 
+Model Metrics for logistic regression with data version v2
+accuracy is 0.6% 
+precision is 0.5% 
+recall is 0.5% 
+F1 Score 0.5% 
+Model Metrics for decision tree with data version v2
+accuracy is 0.6% 
+precision is 0.6% 
+recall is 0.5% 
+F1 Score 0.6% 
+Model Metrics for random forest with data version v2
+accuracy is 0.5% 
+precision is 0.5% 
+recall is 0.5% 
+F1 Score 0.5% 
+Model Metrics for xgboost with data version v2
+accuracy is 0.6% 
+precision is 0.6% 
+recall is 0.5% 
+F1 Score 0.5% 
+Model Metrics for logistic regression with data version v3
+accuracy is 0.5% 
+precision is 0.2% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for decision tree with data version v3
+accuracy is 0.5% 
+precision is 0.2% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for random forest with data version v3
+accuracy is 0.5% 
+precision is 0.2% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for xgboost with data version v3
+accuracy is 0.5% 
+precision is 0.2% 
+recall is 0.0% 
+F1 Score 0.1% 
+Model Metrics for logistic regression with data version v4
+accuracy is 0.6% 
+precision is 0.5% 
+recall is 0.2% 
+F1 Score 0.2% 
+Model Metrics for decision tree with data version v4
+accuracy is 0.6% 
+precision is 0.3% 
+recall is 0.2% 
+F1 Score 0.2% 
+Model Metrics for random forest with data version v4
+accuracy is 0.8% 
+precision is 0.8% 
+recall is 0.5% 
+F1 Score 0.6% 
+Model Metrics for xgboost with data version v4
+accuracy is 0.7% 
+precision is 1.0% 
+recall is 0.2% 
+F1 Score 0.3% 
+Model Metrics for logistic regression with data version v5
+accuracy is 0.4% 
+precision is 0.0% 
+recall is 0.0% 
+F1 Score 0.0% 
+Model Metrics for decision tree with data version v5
+accuracy is 0.5% 
+precision is 0.7% 
+recall is 0.2% 
+F1 Score 0.3% 
+Model Metrics for random forest with data version v5
+accuracy is 0.5% 
+precision is 0.7% 
+recall is 0.4% 
+F1 Score 0.5% 
+Model Metrics for xgboost with data version v5
+accuracy is 0.6% 
+precision is 0.8% 
+recall is 0.4% 
+F1 Score 0.6% 
