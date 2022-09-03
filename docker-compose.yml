@@ -3,4 +3,5 @@ version: "3.7"
 services: 
     abtest-mlops:
       build: .
+      image: abtest_mlops:tenacademyabtest
       command: sh -c "sleep 10s;python setup.py"
