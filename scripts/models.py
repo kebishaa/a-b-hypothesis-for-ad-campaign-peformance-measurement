@@ -20,8 +20,8 @@ class BuildModels:
     def get_models(self):
         models = list()
         models.append(['logistic regression',LogisticRegression()])
-        models.append(['decision tree',DecisionTreeClassifier()])
-        models.append(['random forest',RandomForestClassifier()])
+        # models.append(['decision tree',DecisionTreeClassifier()])
+        # models.append(['random forest',RandomForestClassifier()])
         models.append(['xgboost',XGBClassifier()])
         return models
    
