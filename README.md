@@ -16,6 +16,7 @@ Design a reliable hypothesis testing algorithm for the BIO service and to determ
 ## mlflow
 
 ## Interpretation & Reporting
+![abtest](https://miro.medium.com/max/1260/1*V8xZOmLUxY4_zc4U1Ee7og.png)
 https://medium.com/@degagawolde/a-b-testing-hypothesis-testing-machine-learning-1b352a6ff180
 
 ## Authors
