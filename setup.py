@@ -78,7 +78,6 @@ for v in versions:
     print("X_test shape: ", X_test.shape), print(
         "y_test shape: ", y_test.shape)
 
-
     with mlflow.start_run():
         # Log data params
         mlflow.log_param("data_url", data_url)
@@ -91,6 +90,7 @@ for v in versions:
             grid_values, grid_clf_acc = bm.grid_search(model[0], model[1])
             grid_clf_acc.fit(X_train, y_train)
             
+            mlflow.log_param('best param for '+model[0],grid_clf_acc.best_params_)
             #Predict values based on new parameters
             y_pred_acc = grid_clf_acc.predict(X_test)
             

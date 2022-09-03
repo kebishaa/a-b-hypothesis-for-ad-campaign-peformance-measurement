@@ -21,7 +21,7 @@ class BuildModels:
         models = list()
         models.append(['logistic regression',LogisticRegression()])
         models.append(['decision tree',DecisionTreeClassifier()])
-        # models.append(['random forest',RandomForestClassifier()])
+        models.append(['random forest',RandomForestClassifier()])
         models.append(['xgboost',XGBClassifier()])
         return models
    
@@ -38,16 +38,16 @@ class BuildModels:
             grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
             return grid_values, grid_clf_acc
         
-    #    elif mtype == 'random forest':
-    #        grid_values = {'n_estimators': [100,200,300,400,500], 
-    #                       'max_features': ['auto', 'sqrt'],
-    #                       'max_depth': [4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 20, 30],
-    #                       'min_samples_split': [2, 5, 10] , 
-    #                       'min_samples_leaf': [1, 2, 4], 
-    #                       'bootstrap': [True, False]}
+       elif mtype == 'random forest':
+           grid_values = {'n_estimators': [100,200], 
+                          'max_features': ['auto', 'sqrt'],
+                          'max_depth': [4, 5, 15, 20],
+                          'min_samples_split': [2, 5, 10] , 
+                          'min_samples_leaf': [1, 2, 4], 
+                          'bootstrap': [True, False]}
            
-        #    grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
-        #    return grid_values, grid_clf_acc
+           grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
+           return grid_values, grid_clf_acc
        
        elif mtype=='xgboost':
            grid_values = {"subsample": [0.5, 0.75, 1],
@@ -55,7 +55,7 @@ class BuildModels:
                          "max_depth": [2, 6, 12],
                          "min_child_weight": [1, 5, 15],
                          "learning_rate": [0.3, 0.1, 0.03],
-                         "n_estimators": [100,200,300,400,500]}
+                         "n_estimators": [100]}
            grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
            return grid_values, grid_clf_acc
            
