@@ -78,12 +78,6 @@ for v in versions:
     print("X_test shape: ", X_test.shape), print(
         "y_test shape: ", y_test.shape)
 
-    print("X_train shape: ", X_train.shape), print(
-        "y_train shape: ", y_train.shape)
-    print("X_valid shape: ", X_valid.shape), print(
-        "y_valid shape: ", y_valid.shape)
-    print("X_test shape: ", X_test.shape), print(
-        "y_test shape: ", y_test.shape)
 
     with mlflow.start_run():
         # Log data params
