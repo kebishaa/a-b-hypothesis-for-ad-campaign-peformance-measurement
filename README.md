@@ -9,11 +9,8 @@ Design a reliable hypothesis testing algorithm for the BIO service and to determ
 - tests/tests.py - unnitest functions
 - scripts/* - module for plotting, loading data, and etc
 
-## CML
-
-## dvc
-
-## mlflow
+## CML, dvc, mlflow
+![dvccml](https://user-images.githubusercontent.com/39389971/169132509-958aad9a-84da-40da-ab7a-5b1afecacc5c.png)
 
 ## Interpretation & Reporting
 ![abtest](https://miro.medium.com/max/1260/1*V8xZOmLUxY4_zc4U1Ee7og.png)
