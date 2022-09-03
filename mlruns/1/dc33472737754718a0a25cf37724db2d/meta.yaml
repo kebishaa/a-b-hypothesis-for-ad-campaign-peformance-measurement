@@ -1,8 +1,9 @@
 artifact_uri: file:///home/jds98/10%20Academy/Week%202/a-b-hypothesis-for-ad-campaign-peformance-measurement/mlruns/1/dc33472737754718a0a25cf37724db2d/artifacts
+deleted_time: 1662203495018
 end_time: 1662052331876
 entry_point_name: ''
 experiment_id: '1'
-lifecycle_stage: active
+lifecycle_stage: deleted
 name: ''
 run_id: dc33472737754718a0a25cf37724db2d
 run_uuid: dc33472737754718a0a25cf37724db2d

@@ -102,6 +102,7 @@ for v in versions:
             
             y_pred_acc = [int(pred) for pred in y_pred_acc]
             # New Model Evaluation metrics
+            print('Model Metrics for '+model[0]+" with data version "+v+'\n')
             print('Accuracy Score : ' + str(accuracy_score(y_test, y_pred_acc)))
             print('Precision Score : ' + str(precision_score(y_test, y_pred_acc)))
             print('Recall Score : ' + str(recall_score(y_test, y_pred_acc)))
@@ -117,7 +118,7 @@ for v in versions:
             plt.close()
 
             # Writing to file
-            with open("./models/metrics.txt", "w") as file1:
+            with open("./models/metrics.txt", "a") as file1:
                 # Writing data to a file
                 file1.write('Model Metrics for '+model[0]+" with data version "+v+'\n')
                 file1.write("accuracy is %2.1f%% \n" %
@@ -128,7 +129,7 @@ for v in versions:
                             recall_score(y_test, y_pred_acc))
                 file1.write("F1 Score %2.1f%% \n" % 
                             f1_score(y_test, y_pred_acc))
-
+            
             mlflow.log_metric("acc",  accuracy_score(y_test, y_pred_acc))
             mlflow.log_metric("prec",  precision_score(y_test, y_pred_acc))
             mlflow.log_metric("recall", recall_score(y_test, y_pred_acc))
@@ -144,6 +145,6 @@ for v in versions:
                 # please refer to the doc for more information:
                 # https://mlflow.org/docs/latest/model-registry.html#api-workflow
                 mlflow.sklearn.log_model(
-                    grid_clf_acc, "model", registered_model_name=model[0])
+                    grid_clf_acc, model[0], registered_model_name=model[0])
             else:
-                mlflow.sklearn.log_model(model[1], "model")
+                mlflow.sklearn.log_model(model[1], model[0])
