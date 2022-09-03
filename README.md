@@ -9,8 +9,11 @@ Design a reliable hypothesis testing algorithm for the BIO service and to determ
 - tests/tests.py - unnitest functions
 - scripts/* - module for plotting, loading data, and etc
 
-### What to do next
-- MLOps planning and set up
-- ML modeling with MLOps
-- Apply your pipeline to a new dataset
-- Interpretation & Reporting
+## CML
+
+## dvc
+
+## mlflow
+
+## Interpretation & Reporting
+https://medium.com/@degagawolde/a-b-testing-hypothesis-testing-machine-learning-1b352a6ff180
