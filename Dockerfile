@@ -14,5 +14,3 @@ RUN apt-get update && \
 
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
-
-CMD ["python" "setup.py"]
