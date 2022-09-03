@@ -28,26 +28,26 @@ class BuildModels:
     def grid_search(self,mtype:str,model):
         
        if mtype == 'logistic regression':
-            grid_values = {'penalty': ['l2'], 'C': [0.001, .009, 0.01, .09, 1, 5, 10, 25]}
+            grid_values = {'penalty': ['l2'], 'C': [0.001, .009, 0.01, .09, 1, 5, 10]}
             grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
             return grid_values, grid_clf_acc
        
        elif mtype == 'decision tree':
             grid_values = {'criterion': ['gini', 'entropy'], 
-                           'max_depth': [4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 20, 30, 40, 50]}
+                           'max_depth': [4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 20, 30]}
             grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
             return grid_values, grid_clf_acc
         
     #    elif mtype == 'random forest':
-    #        grid_values = {'n_estimators': [int(x) for x in np.linspace(start=200, stop=1000, num=10)], 
+    #        grid_values = {'n_estimators': [100,200,300,400,500], 
     #                       'max_features': ['auto', 'sqrt'],
-    #                       'max_depth': [int(x) for x in np.linspace(10, 110, num = 11)] , 
+    #                       'max_depth': [4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 20, 30],
     #                       'min_samples_split': [2, 5, 10] , 
     #                       'min_samples_leaf': [1, 2, 4], 
     #                       'bootstrap': [True, False]}
            
-    #        grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
-    #        return grid_values, grid_clf_acc
+        #    grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
+        #    return grid_values, grid_clf_acc
        
        elif mtype=='xgboost':
            grid_values = {"subsample": [0.5, 0.75, 1],
@@ -55,7 +55,7 @@ class BuildModels:
                          "max_depth": [2, 6, 12],
                          "min_child_weight": [1, 5, 15],
                          "learning_rate": [0.3, 0.1, 0.03],
-                         "n_estimators": [100]}
+                         "n_estimators": [100,200,300,400,500]}
            grid_clf_acc = GridSearchCV(model, param_grid=grid_values, scoring='recall')
            return grid_values, grid_clf_acc
            
