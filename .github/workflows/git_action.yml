@@ -42,12 +42,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           
-      - name: Format repo slug
-        uses: actions/github-script@v4
-        id: repo_slug
-        with:
-            result-encoding: string
-            script: return `ghcr.io/${github.repository.toLowerCase()}`
+      # - name: Format repo slug
+      #   uses: actions/github-script@v4
+      #   id: repo_slug
+      #   with:
+      #       result-encoding: string
+      #       script: return 'ghcr.io/${github.repository.toLowerCase()}'
 
       - name: Build and push dill to Docker
         uses: docker/build-push-action@v2
