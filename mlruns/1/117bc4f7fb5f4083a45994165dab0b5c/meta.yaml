@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/user/TENAC/week-1-4/Week-2/a-b-hypothesis-for-ad-campaign-peformance-measurement/mlruns/1/117bc4f7fb5f4083a45994165dab0b5c/artifacts
+deleted_time: 1662203494958
+end_time: 1662195300246
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: deleted
+name: ''
+run_id: 117bc4f7fb5f4083a45994165dab0b5c
+run_uuid: 117bc4f7fb5f4083a45994165dab0b5c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1662195298052
+status: 4
+tags: []
+user_id: user
